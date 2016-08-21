@@ -1,0 +1,35 @@
+body {
+  background: #000;
+}
+.img {
+  position: relative;
+  width: 1000px;
+  height: 420px;
+  margin: 50px auto 0;
+  background: url('../img/wampastompamix-bg.png');
+}
+.text {
+  position: absolute;
+  top: 50px;
+  left: -30px;
+  width: 500px;
+  height: 2em;
+  font-family: 'Open Sans script=all rev=7', Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  color: #da3df4;
+  font-size: 85px;
+  font-weight: bold;
+  transform: rotate(-20deg) skew(-20deg);
+  text-align: center;
+  background: -webkit-linear-gradient(#d33aea, #e62b43);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1em;
+  /*text-shadow: -1px -1px 1px #d33aea, 1px 1px 1px #e62b43;*/
+}
+.hand {
+  position: absolute;
+  width: 1000px;
+  height: 420px;
+  background: url('../img/wampastompamix-hand.png');
+}
