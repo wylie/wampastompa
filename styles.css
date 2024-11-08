@@ -6,7 +6,7 @@ body {
   width: 1000px;
   height: 420px;
   margin: 50px auto 0;
-  background: url('../img/wampastompamix-bg.png');
+  background: url('img/wampastompamix-bg.png');
 }
 .text {
   position: absolute;
@@ -31,5 +31,5 @@ body {
   position: absolute;
   width: 1000px;
   height: 420px;
-  background: url('../img/wampastompamix-hand.png');
+  background: url('img/wampastompamix-hand.png');
 }

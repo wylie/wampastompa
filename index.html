@@ -1,28 +1,16 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <title>Wampa Stompa</title>
-
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css" />
-
-</head>
-<body>
-
-  <div class="img">
-    <div class="text" id="txt"></div>
-    <div class="hand"></div>
-  </div>
-
-  <script type="text/javascript">
-      var txt = document.getElementById('txt');
-      var loc = window.location.hash;
-      var hash = loc.split('#');
-      console.log( hash );
-      var nam = hash[1].replace(/[-_\s]/g, " ");
-      txt.innerHTML = nam;
-  </script>
-
-</body>
+  <head>
+    <meta charset="utf-8">
+    <title>Wampa Stompa</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+    <script src="js/script.js"></script>
+  </head>
+  <body>
+    <div class="img">
+      <div class="text" id="txt"></div>
+      <div class="hand"></div>
+    </div>
+  </body>
 </html>
