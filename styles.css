@@ -2,27 +2,33 @@
 
 body {
   background: #000;
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  color: transparent;
+  font-size: 5vw;
+  font-weight: bold;
 }
 
+
+.img,
+.hand {
+  width: 61vw;
+  height: 59vh;
+}
 .img {
   position: relative;
-  width: 1000px;
-  height: 420px;
   margin: 50px auto 0;
   background: url('img/wampastompamix-bg.png');
+  background-size: contain;
+  background-repeat: no-repeat
 }
 
 .text {
   position: absolute;
-  top: 40px;
-  left: -30px;
-  width: 500px;
-  height: 2em;
-  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-  text-transform: uppercase;
-  color: transparent;
-  font-size: 5.5rem;
-  font-weight: bold;
+  top: 3vh;
+  left: -6vw;
+  width: 40vw;
+  height: 22vh;
   transform: rotate(-20deg) skew(-20deg);
   text-align: center;
   background: -webkit-linear-gradient(#d33aea, #e62b43);
@@ -32,7 +38,7 @@ body {
 
 .hand {
   position: absolute;
-  width: 1000px;
-  height: 420px;
   background: url('img/wampastompamix-hand.png');
+  background-size: contain;
+  background-repeat: no-repeat
 }
