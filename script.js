@@ -1,14 +1,33 @@
 document.addEventListener('DOMContentLoaded', () => {
   const txt = document.getElementById('txt');
   const input = document.getElementById('mixName');
+  const canvas = document.getElementById('textCanvas');
+  const ctx = canvas.getContext('2d');
 
   input.addEventListener('input', () => {
     const nam = input.value;
 
     if (txt && nam) {
-      txt.setAttribute('data-text', nam.replace(/[-_\s]/g, " "));
+      txt.innerHTML = nam.replace(/[-_\s]/g, " ");
+      drawText(nam.replace(/[-_\s]/g, " "));
     }
   });
+
+  function drawText(text) {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.font = 'bold 5.5rem "Open Sans", Arial, Helvetica, sans-serif';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.translate(canvas.width / 2, canvas.height / 2);
+    ctx.rotate(-20 * Math.PI / 180);
+    ctx.skewX(-20 * Math.PI / 180);
+    const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+    gradient.addColorStop(0, '#d33aea');
+    gradient.addColorStop(1, '#e62b43');
+    ctx.fillStyle = gradient;
+    ctx.fillText(text, 0, 0);
+    ctx.resetTransform();
+  }
 
   console.log('html2canvas in script.js:', typeof html2canvas);
 
