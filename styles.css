@@ -40,22 +40,6 @@ button {
   background-origin: border-box;
 }
 
-.text {
-  position: absolute;
-  top: 75px;
-  left: -10px;
-  width: 450px;
-  height: 1.65em;
-  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-  text-transform: uppercase;
-  font-size: 5.5rem;
-  font-weight: bold;
-  transform: rotate(-20deg) skew(-20deg);
-  text-align: center;
-  line-height: .8;
-  color: transparent;
-}
-
 .text::before {
   content: attr(data-text);
   background: linear-gradient(#d33aea, #e62b43);
