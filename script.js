@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function drawText(text) {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.save();
-    ctx.font = 'bold 5.5rem "Open Sans", Arial, Helvetica, sans-serif';
+    ctx.font = 'bolder 5.5rem "Open Sans", Arial, Helvetica, sans-serif';
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
     ctx.translate(canvas.width / 4.5, 100);
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const maxWidth = 400;
     const lineHeight = 80;
-    const lines = wrapText(ctx, text, maxWidth, 2);
+    const lines = wrapText(ctx, text.toUpperCase(), maxWidth, 2); // Convert text to uppercase
 
     lines.forEach((line, index) => {
       ctx.fillText(line, 0, index * lineHeight);
