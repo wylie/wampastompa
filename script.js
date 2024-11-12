@@ -14,17 +14,17 @@ document.addEventListener('DOMContentLoaded', () => {
     ctx.font = 'bold 5.5rem "Open Sans", Arial, Helvetica, sans-serif';
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
-    ctx.translate(canvas.width / 4.5, 100); // Adjust the y-coordinate to position the text correctly
+    ctx.translate(canvas.width / 4.5, 100);
     ctx.rotate(-20 * Math.PI / 180);
-    ctx.transform(1, 0, -0.36, 1, 0, 0); // Skew transformation
+    ctx.transform(1, 0, -0.36, 1, 0, 0);
     const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
     gradient.addColorStop(0, '#d33aea');
     gradient.addColorStop(1, '#e62b43');
     ctx.fillStyle = gradient;
 
-    const maxWidth = 400; // Maximum width of the text before wrapping
-    const lineHeight = 80; // Line height for wrapped text
-    const lines = wrapText(ctx, text, maxWidth, 2); // Limit to 2 lines
+    const maxWidth = 400;
+    const lineHeight = 80;
+    const lines = wrapText(ctx, text, maxWidth, 2);
 
     lines.forEach((line, index) => {
       ctx.fillText(line, 0, index * lineHeight);
@@ -53,12 +53,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     lines.push(currentLine);
     if (lines.length > maxLines) {
-      lines[maxLines - 1] += '...'; // Truncate with ellipsis if exceeds max lines
+      lines[maxLines - 1] += '...';
     }
     return lines.slice(0, maxLines);
   }
-
-  console.log('html2canvas in script.js:', typeof html2canvas);
 
   if (typeof html2canvas !== 'undefined') {
     document.getElementById('downloadBtn').addEventListener('click', function() {

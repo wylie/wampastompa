@@ -6,16 +6,12 @@
   <title>Wampa Stompa</title>
   <link rel="stylesheet" href="styles.css">
   <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.7/dist/html2canvas.min.js"></script>
-  <script>
-    console.log('html2canvas:', typeof html2canvas);
-  </script>
   <script src="script.js"></script>
 </head>
 <body>
   <header>
     <h1>Wampa Stompa</h1>
-    <p>Create your own Wampa Stompa remix by entering your mix name in the input below. This is based off of the YouTube video, Darth Punk.</p>
-    <input type="text" id="mixName" placeholder="Enter your mix name" />
+    <p>Wampa Stompa is inspired by the 2015 YouTube video <em>Darth Punk - The Funk Awakens</em>, which creatively combines Star Wars and Daft Punk. I captured a screenshot from the video to create my own Wampa Stompa mixes, leading to the creation of this site. Initially simple, the site has evolved over the years, and now you can download your own Wampa Stompa Mix! Enjoy!</p>    <input type="text" id="mixName" placeholder="Enter your mix name" />
   </header>
   <main>
     <section class="img">
@@ -23,6 +19,7 @@
       <div class="hand"></div>
     </section>
     <button class="download-btn" id="downloadBtn">Download Your Wampa Stompa Mix</button>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/1qhbKGc5rVM?si=uLBWaYi6d9rVrUk_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   </main>
   <img src="img/wampastompamix-bg.png" style="display:none;" crossorigin="anonymous">
   <img src="img/wampastompamix-hand.png" style="display:none;" crossorigin="anonymous">
