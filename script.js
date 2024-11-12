@@ -1,12 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const txtSpan = document.getElementById('txtSpan');
+  const txt = document.getElementById('txt');
   const input = document.getElementById('mixName');
 
   input.addEventListener('input', () => {
     const nam = input.value;
 
-    if (txtSpan && nam) {
-      txtSpan.innerHTML = nam.replace(/[-_\s]/g, " ");
+    if (txt && nam) {
+      txt.setAttribute('data-text', nam.replace(/[-_\s]/g, " "));
     }
   });
 
