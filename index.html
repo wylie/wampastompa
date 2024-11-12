@@ -5,14 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Wampa Stompa</title>
   <link rel="stylesheet" href="styles.css">
-  <script defer src="script.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.7/dist/html2canvas.min.js"></script>
+  <script>
+    console.log('html2canvas:', typeof html2canvas);
+  </script>
+  <script src="script.js"></script>
 </head>
 <body>
+  <header>
+    <h1>Wampa Stompa</h1>
+    <p>Create your own Wampa Stompa remix by entering your mix name in the input below. This is based off of the YouTube video, Darth Punk.</p>
+    <input type="text" id="mixName" placeholder="Enter your mix name" />
+  </header>
   <main>
     <section class="img">
       <div class="text" id="txt"></div>
       <div class="hand"></div>
     </section>
+    <button class="download-btn" id="downloadBtn">Download Image</button>
   </main>
+  <img src="img/wampastompamix-bg.png" style="display:none;" crossorigin="anonymous">
+  <img src="img/wampastompamix-hand.png" style="display:none;" crossorigin="anonymous">
 </body>
 </html>
