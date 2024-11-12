@@ -40,17 +40,17 @@ input {
   height: 1.65em;
   font-family: 'Open Sans', Arial, Helvetica, sans-serif;
   text-transform: uppercase;
-  color: white;
   font-size: 5.5rem;
   font-weight: bold;
   transform: rotate(-20deg) skew(-20deg);
   text-align: center;
+  line-height: .8;
+}
+
+.text span {
   background: linear-gradient(#d33aea, #e62b43);
   -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-mask: url(#mask);
-  mask: url(#mask);
-  line-height: .8;
+  color: transparent;
 }
 
 .hand {
