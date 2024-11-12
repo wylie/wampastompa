@@ -45,6 +45,7 @@ input {
   transform: rotate(-20deg) skew(-20deg);
   text-align: center;
   background: -webkit-linear-gradient(#d33aea, #e62b43);
+  -webkit-background-clip: text;
   background-clip: text;
   line-height: .8;
 }
