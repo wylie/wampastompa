@@ -10,10 +10,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function drawText(text) {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.save();
     ctx.font = 'bold 5.5rem "Open Sans", Arial, Helvetica, sans-serif';
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
-    ctx.translate(canvas.width / 2, canvas.height / 2);
+    ctx.translate(canvas.width / 2, 75); // Adjust the y-coordinate to position the text correctly
     ctx.rotate(-20 * Math.PI / 180);
     ctx.transform(1, 0, -0.36, 1, 0, 0); // Skew transformation
     const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
@@ -21,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     gradient.addColorStop(1, '#e62b43');
     ctx.fillStyle = gradient;
     ctx.fillText(text, 0, 0);
-    ctx.resetTransform();
+    ctx.restore();
   }
 
   console.log('html2canvas in script.js:', typeof html2canvas);
